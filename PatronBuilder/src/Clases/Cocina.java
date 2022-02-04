@@ -2,21 +2,21 @@ package Clases;
 
 public class Cocina {
 
-    private PizzaBuilder pizzaBuilder;
+    private Instrumentos utensiliosCocina;
 
-    public void setPizzaBuilder(PizzaBuilder piz){
-        pizzaBuilder=piz;
+    public void setUtensiliosCocina(Instrumentos Cuchara){
+        utensiliosCocina =Cuchara;
     }
 
-    public Pizza getPizza(){
-        return pizzaBuilder.getPizza();
+    public Cuchara getCuchara(){
+        return utensiliosCocina.getInstrumentos();
     }
 //metodos que tienen un cuerpo, ya que recibe argumentos de clases heredada abstracta
-    public void construirPizza(){
-        pizzaBuilder.crearNuevaPizza();
-        pizzaBuilder.builMasa();
-        pizzaBuilder.builRelleno();
-        pizzaBuilder.builSalsa();
+    public void construirCuchara(){
+        utensiliosCocina.crearNuevaCuchara();
+        utensiliosCocina.builMaterial();
+        utensiliosCocina.builTipo();
+        utensiliosCocina.builTamanio();
     }
     //es el director que se encarga de hacer uso de los objetos builder
 }
